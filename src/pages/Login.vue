@@ -1,7 +1,7 @@
 <template>
     <div class="login">
         <div class="login-form">
-            <form>
+            <form action="/Dashboard">
                 <div class="top">
                     <h1>MyGala</h1>
                     <h4>A Deal Platform</h4>
