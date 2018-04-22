@@ -1,14 +1,13 @@
 <template>
     <div class="dashboard">
-        <header-component/>
-
-        <other-component/>
+        <div class="content">
+            <page-header></page-header>
+        </div>
     </div>
 </template>
 
 <script>
-    import HeaderComponent from './Header.vue'
-    import OtherComponent from './Other.vue'
+    import PageHeader from '../components/PageHeader.vue'
     export default{
         data(){
             return{
@@ -16,8 +15,7 @@
             }
         },
         components:{
-            'other-component':OtherComponent,
-            HeaderComponent,
+            PageHeader
         }
     }
 </script>

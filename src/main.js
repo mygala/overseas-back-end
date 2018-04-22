@@ -4,9 +4,11 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import App from './App'
 import router from './router/router'
+import VueResource from 'vue-resource'
 import i18n from 'vue-i18n'
 
 Vue.use(Vuex);
+Vue.use(VueResource);
 
 Vue.config.productionTip = false
 

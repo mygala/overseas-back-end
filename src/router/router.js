@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Login from '@/pages/Login'
+import Main from '@/pages/Main'
 import Dashboard from '@/pages/Dashboard'
 
 Vue.use(Router);
@@ -12,15 +13,21 @@ const router = new Router({
         // 登陆
         {
             path: '/Login',
-            name: 'Login',
             component: Login
         },
 
-        // 仪表盘
         {
-            path: '/Dashboard',
-            name: 'Dashboard',
-            component: Dashboard
+            // Main框架
+            path: '/Main',
+            component: Main,
+            children: [
+
+                // 仪表盘
+                {
+                    path: '/Dashboard',
+                    component: Dashboard
+                }
+            ]
         },
 
         // 默认路由
