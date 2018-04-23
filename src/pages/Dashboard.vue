@@ -20,6 +20,6 @@
     }
 </script>
 
-<style type="stylesheet/less">
-    @import "../assets/less/pages/Dashboard.less";
+<style type="stylesheet/less" lang="less" scoped>
+    @import "../assets/less/pages/Dashboard";
 </style>
