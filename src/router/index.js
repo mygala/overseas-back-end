@@ -1,30 +1,28 @@
-import Vue from 'vue'
-import Router from 'vue-router'
-import Login from '@/pages/Login'
-import Main from '@/pages/Main'
-import Dashboard from '@/pages/Dashboard'
+import Vue from "vue";
+import Router from "vue-router";
+import Login from "@/pages/Login";
+import Main from "@/pages/Main";
+import Dashboard from "@/pages/Dashboard";
 
 Vue.use(Router);
 
 const router = new Router({
-    mode: 'history',
+    mode: "history",
     routes: [
-
         // 登陆
         {
-            path: '/Login',
+            path: "/Login",
             component: Login
         },
 
         {
             // Main框架
-            path: '/Main',
+            path: "/Main",
             component: Main,
             children: [
-
                 // 仪表盘
                 {
-                    path: '/Dashboard',
+                    path: "/Dashboard",
                     component: Dashboard
                 }
             ]
@@ -32,14 +30,14 @@ const router = new Router({
 
         // 默认路由
         {
-            path: '/',
-            redirect: 'Login'
+            path: "/",
+            redirect: "Login"
         },
 
         // 错误路径跳转登陆
         {
             path: "*",
-            redirect: 'Login'
+            redirect: "Login"
         }
     ]
 });
